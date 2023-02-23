@@ -1,24 +1,16 @@
-# Workshop-1
-CodersLab Workshop 1
+# Workshop-2
+CodersLab Workshop 2
 
+Celem warsztatu jest wytworzenie obiektowej warstwy dostępu do danych. 
+Program posiada klasę UserDao, dzięki którejmozna wykonywać operacje na utworzonej bazie danych.
 
-Programu konsolowy do zarządzania zadaniami: Tasks.
-Dane do zasilenia programu przechowywane są w pliku tekstowym w formacie CSV.
-Są w następującym formacie:
+W projekcie tym użyto praktycznie wszystkie rzeczy przerobione podczas modułu takie jak:
 
-Simple task - very important, 2020-03-09, true
+- klasy,
+- obiekty,
+- wczytywanie danych za pomocą SQL,
+- usuwanie danych za pomocą SQL,
+- zmiana danych za pomocą SQL.
 
-Second task not so important, 2020-05-10, false
-
-Throw away trash, 2020-03-09, false
-
-Aplikacja posiada możliwość wpisywania komend i wykonywania odpowiednich operacji w zależności od komendy, która została wpisana.
-Aplikacja posiada następujące funkcje:
-- wyświetlanie wszystkich dostępnych zadań,
-- wyjście z aplikacji,
-- dodanie zadania,
-- usuwanie zadania,
-- wczytywanie danych z pliku przy starcie aplikacji,
-- zapis danych do pliku,
-- sprawdzanie poprawność wartości liczbowej podczas usuwania.
+Klasy implementują wzorzec Data Access Object.
 
