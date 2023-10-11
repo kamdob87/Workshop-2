@@ -11,6 +11,10 @@ public class Main {
         user.setPassword("alamakota");
 
         UserDao userDao = new UserDao();
-        userDao.create(user);
+//        * testowanie create
+//        userDao.create(user);
+
+//        * testowanie read
+//        System.out.println(userDao.read(3).getUserName());
     }
 }

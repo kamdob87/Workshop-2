@@ -35,4 +35,23 @@ public class UserDao {
             return null;
         }
     }
+
+    public User read(int userId) {
+        try (Connection conn = DbUtil.getConnection()) {
+            PreparedStatement statement = conn.prepareStatement(READ_USER_QUERY);
+            statement.setInt(1, userId);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                User user = new User();
+                user.setId(rs.getInt("id"));
+                user.setEmail(rs.getString("email"));
+                user.setUserName(rs.getString("username"));
+                user.setPassword(rs.getString("password"));
+                return user;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
