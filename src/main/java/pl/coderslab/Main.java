@@ -5,16 +5,31 @@ import pl.coderslab.entity.UserDao;
 
 public class Main {
     public static void main(String[] args) {
-        User user = new User();
-        user.setUserName("Kamil");
-        user.setEmail("kamdob87@gmail.com");
-        user.setPassword("alamakota");
 
-        UserDao userDao = new UserDao();
 //        * testowanie create
+//        User user = new User();
+//        user.setUserName("Kamil");
+//        user.setEmail("kamdossb87@gmail.com");
+//        user.setPassword("alamakota");
+//        UserDao userDao = new UserDao();
 //        userDao.create(user);
 
+
 //        * testowanie read
-//        System.out.println(userDao.read(3).getUserName());
+//        UserDao userDao = new UserDao();
+//        System.out.println("Id: " + userDao.read(3).getId());
+//        System.out.println("Username: " + userDao.read(3).getUserName());
+//        System.out.println("Email: " + userDao.read(3).getEmail());
+
+//        * testowanie update
+//        UserDao userDao = new UserDao();
+//        User user1 = new User();
+//        user1 = userDao.read(4);
+//        user1.setUserName("Ala");
+//        user1.setEmail("ma");
+//        user1.setPassword("kota");
+//        userDao.update(user1);
+
+//        * testowanie delte
     }
 }
