@@ -31,5 +31,7 @@ public class Main {
 //        userDao.update(user1);
 
 //        * testowanie delte
+//        UserDao userDao = new UserDao();
+//        userDao.delete(4);
     }
 }
