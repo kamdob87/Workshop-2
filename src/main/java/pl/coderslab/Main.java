@@ -33,5 +33,14 @@ public class Main {
 //        * testowanie delte
 //        UserDao userDao = new UserDao();
 //        userDao.delete(4);
+
+//        * testowanie findAll
+//        UserDao userDao = new UserDao();
+//        User[] all = userDao.findAll();
+//        for (User u : all) {
+//            System.out.println("Id: " + userDao.read(3).getId());
+//            System.out.println("Username: " + userDao.read(3).getUserName());
+//            System.out.println("Email: " + userDao.read(3).getEmail());
+//        }
     }
 }

@@ -4,6 +4,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import pl.coderslab.DbUtil;
 
 import java.sql.*;
+import java.util.Arrays;
 
 public class UserDao {
 
@@ -76,5 +77,30 @@ public class UserDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public User[] findAll () {
+        User[] users = new User[0];
+        try (Connection conn = DbUtil.getConnection()) {
+            PreparedStatement statement = conn.prepareStatement(FIND_ALL_USER_QUERY);
+            ResultSet rs = statement.executeQuery();
+            while (rs.next()) {
+                User user = new User();
+                user.setId(rs.getInt("id"));
+                user.setEmail(rs.getString("email"));
+                user.setUserName(rs.getString("username"));
+                user.setPassword(rs.getString("password"));
+                return addToArray(user, users);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return users;
+    }
+
+    private User[] addToArray(User u, User[] users) {
+        User[] tempArray = Arrays.copyOf(users, users.length + 1);
+        tempArray[tempArray.length - 1] = u;
+        return  tempArray;
     }
 }
