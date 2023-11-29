@@ -7,10 +7,13 @@ public class Main {
     public static void main(String[] args) {
 
 //        * testowanie create
-//        User user = new User();
+        User user = new User();
 //        user.setUserName("Kamil");
 //        user.setEmail("kamdossb87@gmail.com");
 //        user.setPassword("alamakota");
+//        user.setUserName("Jarek");
+//        user.setEmail("jaro@gmail.com");
+//        user.setPassword("kotmaale");
 //        UserDao userDao = new UserDao();
 //        userDao.create(user);
 
@@ -35,12 +38,12 @@ public class Main {
 //        userDao.delete(4);
 
 //        * testowanie findAll
-//        UserDao userDao = new UserDao();
-//        User[] all = userDao.findAll();
-//        for (User u : all) {
-//            System.out.println("Id: " + userDao.read(3).getId());
-//            System.out.println("Username: " + userDao.read(3).getUserName());
-//            System.out.println("Email: " + userDao.read(3).getEmail());
-//        }
+        UserDao userDao = new UserDao();
+        User[] all = userDao.findAll();
+        for (User u : all) {
+            System.out.println("Id: " + userDao.read(3).getId());
+            System.out.println("Username: " + userDao.read(3).getUserName());
+            System.out.println("Email: " + userDao.read(3).getEmail());
+        }
     }
 }
